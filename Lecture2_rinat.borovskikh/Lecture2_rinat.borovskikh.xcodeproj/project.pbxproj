@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9CAC06DD19BD085300A3F692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DC19BD085300A3F692 /* AppDelegate.swift */; };
-		9CAC06DF19BD085300A3F692 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DE19BD085300A3F692 /* ViewController.swift */; };
+		9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */; };
 		9CAC06E219BD085300A3F692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC06E019BD085300A3F692 /* Main.storyboard */; };
 		9CAC06E419BD085300A3F692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC06E319BD085300A3F692 /* Images.xcassets */; };
 		9CAC06F019BD085300A3F692 /* Lecture2_rinat_borovskikhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06EF19BD085300A3F692 /* Lecture2_rinat_borovskikhTests.swift */; };
 		9CAC06FA19BD105200A3F692 /* Authentification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC06F919BD105200A3F692 /* Authentification.storyboard */; };
 		9CAC070219BD1ED700A3F692 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC070119BD1ED700A3F692 /* LoginViewController.swift */; };
+		9CBF66C019C12AB90096FD2A /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF66BF19C12AB90096FD2A /* LectureDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 		9CAC06D719BD085300A3F692 /* Lecture2_rinat.borovskikh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lecture2_rinat.borovskikh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAC06DB19BD085300A3F692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAC06DC19BD085300A3F692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CAC06DE19BD085300A3F692 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesListViewController.swift; sourceTree = "<group>"; };
 		9CAC06E119BD085300A3F692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CAC06E319BD085300A3F692 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9CAC06E919BD085300A3F692 /* Lecture2_rinat.borovskikhTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lecture2_rinat.borovskikhTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +39,7 @@
 		9CAC06EF19BD085300A3F692 /* Lecture2_rinat_borovskikhTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture2_rinat_borovskikhTests.swift; sourceTree = "<group>"; };
 		9CAC06F919BD105200A3F692 /* Authentification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Authentification.storyboard; path = Storyboards/Authentification.storyboard; sourceTree = "<group>"; };
 		9CAC070119BD1ED700A3F692 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		9CBF66BF19C12AB90096FD2A /* LectureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureDetailViewController.swift; path = Controllers/LectureDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,6 @@
 				9CAC06FE19BD198600A3F692 /* Controllers */,
 				9CAC06FB19BD108800A3F692 /* Storyboards */,
 				9CAC06DC19BD085300A3F692 /* AppDelegate.swift */,
-				9CAC06DE19BD085300A3F692 /* ViewController.swift */,
 				9CAC06E319BD085300A3F692 /* Images.xcassets */,
 				9CAC06DA19BD085300A3F692 /* Supporting Files */,
 			);
@@ -126,7 +127,9 @@
 		9CAC06FE19BD198600A3F692 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */,
 				9CAC070119BD1ED700A3F692 /* LoginViewController.swift */,
+				9CBF66BF19C12AB90096FD2A /* LectureDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -232,7 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CAC070219BD1ED700A3F692 /* LoginViewController.swift in Sources */,
-				9CAC06DF19BD085300A3F692 /* ViewController.swift in Sources */,
+				9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */,
+				9CBF66C019C12AB90096FD2A /* LectureDetailViewController.swift in Sources */,
 				9CAC06DD19BD085300A3F692 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

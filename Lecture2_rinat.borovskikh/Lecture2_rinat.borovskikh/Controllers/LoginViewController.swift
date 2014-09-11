@@ -24,6 +24,9 @@ class LoginViewController: UIViewController {
   
     @IBAction func loginAction(sender: UIButton) {
         
+        navigationController.dismissViewControllerAnimated(true, completion: nil)
+        
+        /*
         // Define alert action
         
         var firstAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, {
@@ -40,7 +43,8 @@ class LoginViewController: UIViewController {
         // Place in on scene...
         self.presentViewController(alert, animated: true, completion: nil)
         
-        //navigationController.dismissViewControllerAnimated(true, completion: nil)
+        //
+        */
         
     }
 }
