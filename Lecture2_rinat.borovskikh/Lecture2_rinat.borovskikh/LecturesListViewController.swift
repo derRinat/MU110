@@ -9,7 +9,10 @@
 import UIKit
 
 class LecturesListViewController: UITableViewController {
-                            
+    
+    var lectureCollection = LectureCollection()
+    let lectureDataSource = "" // TODO: make it via config manager (middlewares.get("config").dataSource)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -22,11 +25,12 @@ class LecturesListViewController: UITableViewController {
         
             navigationController!.presentViewController(loginController, animated: true, completion: nil)
         }
+        
+        self.loadCollectionData();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
@@ -40,16 +44,18 @@ class LecturesListViewController: UITableViewController {
         return lectureCell
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetail" {
             if let indexPath = tableView.indexPathForSelectedRow() {
-                
-                (segue.destinationViewController as LectureDetailViewController).lectureTitle = "Лекция №\(indexPath.row + 1)"
+                (segue.destinationViewController as LectureDetailViewController).lectureTitle = "Лекция \(indexPath.row + 1)"
             }
         }
     }
     
-
+    // TODO: make in another queue...
+    
+    private func loadCollectionData() {
+        
+    }
 }
 
