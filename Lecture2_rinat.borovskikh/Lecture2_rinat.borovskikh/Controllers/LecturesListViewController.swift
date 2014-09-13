@@ -42,7 +42,7 @@ class LecturesListViewController: UITableViewController {
     {
         let lectureCell = tableView.dequeueReusableCellWithIdentifier("LectureCell", forIndexPath: indexPath) as UITableViewCell
         
-        let lecture = lectureCollection.getByIndex(indexPath.row)! as Lecture;
+        let lecture = lectureCollection.getByIndex(indexPath.row) as Lecture;
         lectureCell.textLabel?.text = lecture.name
         
         if lecture.viewed == true {
