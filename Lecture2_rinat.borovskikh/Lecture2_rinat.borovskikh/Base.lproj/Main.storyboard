@@ -91,6 +91,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZX5-Zu-lJ7" appends="YES" id="aWS-jc-dwe"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="uxj-mD-pa0"/>
                     <connections>
@@ -100,6 +104,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COf-YO-mQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ZX5-Zu-lJ7"/>
             </objects>
             <point key="canvasLocation" x="593" y="129"/>
         </scene>
