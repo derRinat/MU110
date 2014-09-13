@@ -10,7 +10,7 @@ import Foundation
 
 class LectureCollection {
     
-    var collection:Array<Lecture>;
+    private var collection:Array<Lecture>;
     
     init() {
         collection = [];
