@@ -8,19 +8,19 @@
 
 import Foundation
 
-class LectureCollection {
+class LectureCollection: CollectionInterface {
     
-    private var collection:Array<Lecture>;
+    var collection:Array<AnyObject>
     
     init() {
-        collection = [];
+        collection = []
     }
     
-    func get() -> Array<Lecture> {
+    func get() -> Array<AnyObject> {
         return collection
     }
     
-    func add(lecture:Lecture) { 
+    func add(lecture:AnyObject) {
         collection += [lecture]
     }
     
@@ -28,8 +28,12 @@ class LectureCollection {
         return collection.count
     }
     
-    func getByIndex(index:Int) -> Lecture? {
-        return collection[index] 
+    func getByIndex(index:Int) -> AnyObject? {
+        return collection[index] as Lecture
+    }
+    
+    func setByIndex(index:Int, value:AnyObject) {
+        collection[index] = value
     }
     
     func reset() {

@@ -45,11 +45,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lecture2_rinat.borovskikh/LecturesListViewController.swift"
-            timestampString = "432301488.195167"
+            timestampString = "432316327.817558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "loadCollectionData(_:)"
             landmarkType = "5">
          </BreakpointContent>

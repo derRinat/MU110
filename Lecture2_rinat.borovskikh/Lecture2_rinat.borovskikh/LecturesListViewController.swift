@@ -42,7 +42,7 @@ class LecturesListViewController: UITableViewController {
     {
         let lectureCell = tableView.dequeueReusableCellWithIdentifier("LectureCell", forIndexPath: indexPath) as UITableViewCell
         
-        let lecture = lectureCollection.getByIndex(indexPath.row)!;
+        let lecture = lectureCollection.getByIndex(indexPath.row)! as Lecture;
         lectureCell.textLabel?.text = lecture.name
         
         if lecture.viewed == true {
@@ -56,9 +56,10 @@ class LecturesListViewController: UITableViewController {
         if segue.identifier == "ShowDetail" {
             if let indexPath = tableView.indexPathForSelectedRow() {
                 
-                lectureCollection.getByIndex(indexPath.row)?.viewed = true;
+                let lecture = lectureCollection.getByIndex(indexPath.row) as Lecture
+                lecture.viewed = true;
                 
-                (segue.destinationViewController as LectureDetailViewController).lecture = lectureCollection.getByIndex(indexPath.row)!
+                (segue.destinationViewController as LectureDetailViewController).lecture = lecture
             }
         }
     }

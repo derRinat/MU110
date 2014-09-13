@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C20525119C392AB00C3581A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C20525019C392AB00C3581A /* Config.swift */; };
+		9C20525719C49D2500C3581A /* CollectionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C20525619C49D2500C3581A /* CollectionInterface.swift */; };
 		9CAC06DD19BD085300A3F692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DC19BD085300A3F692 /* AppDelegate.swift */; };
 		9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */; };
 		9CAC06E219BD085300A3F692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC06E019BD085300A3F692 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		9C20525019C392AB00C3581A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Config/Config.swift; sourceTree = "<group>"; };
+		9C20525619C49D2500C3581A /* CollectionInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionInterface.swift; path = Models/Collections/CollectionInterface.swift; sourceTree = "<group>"; };
 		9CAC06D719BD085300A3F692 /* Lecture2_rinat.borovskikh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lecture2_rinat.borovskikh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAC06DB19BD085300A3F692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAC06DC19BD085300A3F692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD4F14C19C3425100E7BF02 /* LectureCollection.swift */,
+				9C20525619C49D2500C3581A /* CollectionInterface.swift */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CAC070219BD1ED700A3F692 /* LoginViewController.swift in Sources */,
+				9C20525719C49D2500C3581A /* CollectionInterface.swift in Sources */,
 				9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */,
 				9CD4F14D19C3425100E7BF02 /* LectureCollection.swift in Sources */,
 				9C20525119C392AB00C3581A /* Config.swift in Sources */,
