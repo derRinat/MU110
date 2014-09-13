@@ -13,18 +13,26 @@ class LectureCollection {
     var collection:Array<Lecture>;
     
     init() {
-        self.collection = [];
+        collection = [];
     }
     
-    func add(lecture:Lecture) {
-    
+    func get() -> Array<Lecture> {
+        return collection
     }
     
-    func getByIndex(index:Int) {
-        
+    func add(lecture:Lecture) { 
+        collection += [lecture]
+    }
+    
+    func getSize() -> Int {
+        return collection.count
+    }
+    
+    func getByIndex(index:Int) -> Lecture? {
+        return collection[index] 
     }
     
     func reset() {
-        self.collection = [];
+        collection = [];
     }
 }

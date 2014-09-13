@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class LecturesListViewController: UITableViewController {
     
-    var lectureCollection = LectureCollection()
-    let lectureDataSource = "" // TODO: make it via config manager (middlewares.get("config").dataSource)
+    var lectureCollection = LectureCollection(),
+        config = Config()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class LecturesListViewController: UITableViewController {
             navigationController!.presentViewController(loginController, animated: true, completion: nil)
         }
         
-        self.loadCollectionData();
+        self.loadCollectionData(lectureCollection);
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,28 +35,61 @@ class LecturesListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return lectureCollection.getSize()
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell
     {
         let lectureCell = tableView.dequeueReusableCellWithIdentifier("LectureCell", forIndexPath: indexPath) as UITableViewCell
-        lectureCell.textLabel?.text = "Лекция \(indexPath.row + 1)"
+        
+        let lecture = lectureCollection.getByIndex(indexPath.row)!;
+        lectureCell.textLabel?.text = lecture.name
+        
+        if lecture.viewed == true {
+            lectureCell.textLabel.textColor = UIColor(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
+        }
+        
         return lectureCell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetail" {
             if let indexPath = tableView.indexPathForSelectedRow() {
-                (segue.destinationViewController as LectureDetailViewController).lectureTitle = "Лекция \(indexPath.row + 1)"
+                
+                lectureCollection.getByIndex(indexPath.row)?.viewed = true;
+                
+                (segue.destinationViewController as LectureDetailViewController).lecture = lectureCollection.getByIndex(indexPath.row)!
             }
         }
     }
-    
+         
     // TODO: make in another queue...
     
-    private func loadCollectionData() {
+    private func loadCollectionData(collection:LectureCollection) {
         
+         Alamofire
+        .request(.GET, config.lecturesURL)
+            .responseJSON {(request, response, JSON, error) in
+                
+                if JSON?.count == nil {
+                    return
+                }
+                
+                if JSON?.count == 0 {
+                    return
+                }
+ 
+                if let json:NSArray = JSON as? NSArray
+                {
+                    for item in json
+                    {
+                        var i:NSDictionary = item as NSDictionary
+                        collection.add(Lecture(lectureData: i))
+                    }
+                    
+                    self.tableView.reloadData();
+                }
+        }
     }
 }
 

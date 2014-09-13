@@ -11,15 +11,18 @@ import UIKit
 class LectureDetailViewController: UIViewController {
     
     @IBOutlet weak var lectureLabel: UILabel!
+    @IBOutlet weak var lectureDesc: UILabel!
+    @IBOutlet weak var lectureDate: UILabel!
     
-    var lectureTitle:String?
+    var lecture:Lecture?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        if lectureTitle != lectureLabel.text {
-                lectureLabel.text = lectureTitle;
-            
+                
+        if lecture?.name != lectureLabel.text {
+            lectureLabel.text = lecture?.name
+            lectureDesc.text  = lecture?.desc
+            lectureDate.text  = lecture?.date
         }
     }
 

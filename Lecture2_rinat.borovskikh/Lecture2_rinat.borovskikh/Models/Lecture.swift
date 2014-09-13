@@ -17,14 +17,13 @@ class Lecture {
         videoURL = "",
         viewed   = false;
     
-    init(lectureData:Dictionary<String,AnyObject>) {
+    init(lectureData:NSDictionary) {
+        //println("Lecture data is: \(lectureData)")
         
-//    
-//        self.name     = lectureData.name;
-//        self.date     = lectureData.data;
-//        self.desc     = lectureData.desc;
-//        self.imageURL = lectureData.image;
-//        self.videoURL = lectureData.video;
-        
+        self.name     = lectureData.valueForKey("name") as String
+        self.desc     = lectureData.valueForKey("description") as String
+        self.date     = lectureData.valueForKey("data") as String
+        self.imageURL = lectureData.valueForKey("image") as String
+        self.videoURL = lectureData.valueForKey("video") as String
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C20525119C392AB00C3581A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C20525019C392AB00C3581A /* Config.swift */; };
 		9CAC06DD19BD085300A3F692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DC19BD085300A3F692 /* AppDelegate.swift */; };
 		9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */; };
 		9CAC06E219BD085300A3F692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC06E019BD085300A3F692 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C20525019C392AB00C3581A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Config/Config.swift; sourceTree = "<group>"; };
 		9CAC06D719BD085300A3F692 /* Lecture2_rinat.borovskikh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lecture2_rinat.borovskikh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAC06DB19BD085300A3F692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAC06DC19BD085300A3F692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C20524E19C3928E00C3581A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9C20525019C392AB00C3581A /* Config.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		9CAC06CE19BD085300A3F692 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		9CAC06D919BD085300A3F692 /* Lecture2_rinat.borovskikh */ = {
 			isa = PBXGroup;
 			children = (
+				9C20524E19C3928E00C3581A /* Config */,
 				9CD4F14819C340B800E7BF02 /* Models */,
 				9CAC06FE19BD198600A3F692 /* Controllers */,
 				9CAC06FB19BD108800A3F692 /* Storyboards */,
@@ -156,8 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				9CAC06DE19BD085300A3F692 /* LecturesListViewController.swift */,
-				9CAC070119BD1ED700A3F692 /* LoginViewController.swift */,
 				9CBF66BF19C12AB90096FD2A /* LectureDetailViewController.swift */,
+				9CAC070119BD1ED700A3F692 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +326,7 @@
 				9CAC070219BD1ED700A3F692 /* LoginViewController.swift in Sources */,
 				9CAC06DF19BD085300A3F692 /* LecturesListViewController.swift in Sources */,
 				9CD4F14D19C3425100E7BF02 /* LectureCollection.swift in Sources */,
+				9C20525119C392AB00C3581A /* Config.swift in Sources */,
 				9CBF66C019C12AB90096FD2A /* LectureDetailViewController.swift in Sources */,
 				9CAC06DD19BD085300A3F692 /* AppDelegate.swift in Sources */,
 				9CD4F14B19C3423200E7BF02 /* Lecture.swift in Sources */,
